@@ -4,7 +4,7 @@ include {
 iam_role = local.account_vars.iam_role
 
 terraform {
-  source = "git::https://github.com/iac-module/aws-grafana-loki.git//?ref=v1.0.0"
+  source = "git::https://github.com/iac-module/aws-grafana-loki.git//?ref=v1.0.1"
 }
 
 locals {

@@ -13,7 +13,7 @@ module "s3_bucket" {
   attach_deny_incorrect_kms_key_sse          = var.s3_bucket.attach_deny_incorrect_kms_key_sse
   allowed_kms_key_arn                        = var.s3_bucket.allowed_kms_key_arn
   attach_deny_unencrypted_object_uploads     = var.s3_bucket.attach_deny_unencrypted_object_uploads
-  bucket                                     = var.s3_bucket.bucket == "" ? "${data.aws_caller_identity.current.account_id}-${data.aws_region.current.name}-loki-data" : var.s3_bucket.bucket
+  bucket                                     = var.s3_bucket.bucket == "" ? "${data.aws_caller_identity.current.account_id}-${data.aws_region.current.name}-${var.s3_bucket.bucket_name_suffix}" : var.s3_bucket.bucket
   bucket_prefix                              = var.s3_bucket.bucket_prefix
   acl                                        = var.s3_bucket.acl
   policy                                     = var.s3_bucket.policy

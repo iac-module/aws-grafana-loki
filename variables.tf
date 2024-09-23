@@ -15,6 +15,7 @@ variable "s3_bucket" {
     attach_deny_incorrect_kms_key_sse          = optional(bool, false)
     allowed_kms_key_arn                        = optional(string, "")
     attach_deny_unencrypted_object_uploads     = optional(bool, false)
+    bucket_name_suffix                         = optional(string, "grafana-loki-data")
     bucket                                     = optional(string, "")
     bucket_prefix                              = optional(string, null)
     acl                                        = optional(string, null)
